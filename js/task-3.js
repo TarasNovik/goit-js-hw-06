@@ -1,5 +1,4 @@
-
-
+class StringBuilder { initialValue }
 
 
 
