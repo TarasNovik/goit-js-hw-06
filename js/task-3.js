@@ -6,29 +6,20 @@ class StringBuilder {
     getValue() {
         return this.#value;
     }
-
     padEnd(str) {
-        const pad1 = this.#value.concat(" ", str);
-
-
+        this.#value = this.#value.concat(" ", str);
+        return;
     }
-
     padStart(str) {
-        let pad2 = this.#value.concat(str, " ");
-
-
+        this.#value = str.concat(" ", this.#value);
+        return;
     }
-
     padBoth(str) {
-        let pad3 = this.#value.concat(str, " ", str);
-
+        this.#value = this.#value.concat(str, " ");
+        this.#value = str.concat(" ", this.#value);
+        return;
     }
-
-
-
-
 }
-
 
 const builder = new StringBuilder(".");
 console.log(builder.getValue()); // "."
