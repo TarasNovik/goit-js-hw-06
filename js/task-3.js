@@ -1,9 +1,33 @@
-class StringBuilder { initialValue }
+class StringBuilder {
+    #value;
+    constructor(params) {
+        this.#value = params;
+    }
+    getValue() {
+        return this.#value;
+    }
+
+    padEnd(str) {
+        const pad1 = this.#value.concat(" ", str);
+
+
+    }
+
+    padStart(str) {
+        let pad2 = this.#value.concat(str, " ");
+
+
+    }
+
+    padBoth(str) {
+        let pad3 = this.#value.concat(str, " ", str);
+
+    }
 
 
 
 
-
+}
 
 
 const builder = new StringBuilder(".");

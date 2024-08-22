@@ -8,14 +8,11 @@ class Storage {
     }
     addItem(newItem) {
         return this.#items.push(newItem);
-
     }
     removeItem(itemToRemove) {
         const newMassiv = this.#items.filter((item) => item !== itemToRemove);
         this.#items = newMassiv;
     }
-
-
 }
 
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
